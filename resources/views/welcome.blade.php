@@ -918,13 +918,13 @@
                                     {{-- <div></div> --}}
 
                                     <div class="hidden sm:flex sm:items-center">
-                                        <a href="#home"
+                                        <a href="/#home"
                                           class="text-gray-800 text-sm font-semibold hover:text-white mr-4 p-8 hover:bg-[#38bdf8]">Home</a>
-                                        <a href="#services"
+                                        <a href="/#services"
                                           class="text-gray-800 text-sm font-semibold hover:text-white mr-4 p-8 hover:bg-[#38bdf8]">Services</a>
-                                        <a href="#transportation"
+                                        <a href="/#transportation"
                                           class="text-gray-800 text-sm font-semibold hover:text-white mr-4 p-8 hover:bg-[#38bdf8]">Transportation</a>
-                                        <a href="#guides"
+                                        <a href="/#guides"
                                           class="text-gray-800 text-sm font-semibold hover:text-white mr-4 p-8 hover:bg-[#38bdf8]">Tourist Guide</a>
                                         <a href="#"
                                           class="text-gray-800 text-sm font-semibold hover:text-white mr-4 p-8 hover:bg-[#38bdf8]">Feedback</a>
@@ -933,12 +933,21 @@
                                     </div>
 
                                     <div class="hidden sm:flex sm:items-center ">
-                                        <a href="#"
-                                            class="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Sign
-                                            in</a>
-                                        <a href="#"
-                                            class="text-gray-800 text-sm font-semibold border px-4 py-2 rounded-lg hover:text-purple-600 hover:border-purple-600">Sign
-                                            up</a>
+                                        @auth
+                                        <a href="{{ route('system.user.home') }}">
+                                            <h1 class="text-md font-2xl hover:text-white hover:bg-slate-400 px-4 py-2">
+                                                Dashboad
+                                            </h1>
+                                        </a>
+                                        @else
+                                        <a href="/login"
+                                        class="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Sign
+                                        in</a>
+                                    <a href="/register"
+                                        class="text-gray-800 text-sm font-semibold border px-4 py-2 rounded-lg hover:text-purple-600 hover:border-purple-600">Sign
+                                        up</a>
+                                        @endauth
+
                                     </div>
 
                                     <div class="sm:hidden cursor-pointer">

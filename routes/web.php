@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MenuController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
@@ -16,8 +17,12 @@ Route::prefix('system')->name('system.')->group(function(){
        // for admin
     Route::prefix('user')->name('user.')->group(function(){
 
+        Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+        // menu
+        Route::get('menu',[MenuController::class,'index'])->name('menu.index');
+
     });
-});
+})->middleware('auth');
 
 Route::get('/', function () {
     return view('welcome');
@@ -51,4 +56,3 @@ Route::get('/test',function(Request $req){
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
