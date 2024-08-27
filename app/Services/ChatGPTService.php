@@ -21,7 +21,11 @@ class ChatGPTService
                     'content' => $msg,
                 ],
             ],
-            'model' => 'llama3-8b-8192',
+            // 'model' => 'llama3-8b-8192',
+            'model' => 'mixtral-8x7b-32768',
+            'response_format' => [
+                "type" => "json_object"
+            ]
         ]);
 
         if ($response->successful()) {

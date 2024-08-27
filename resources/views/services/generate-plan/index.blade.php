@@ -40,7 +40,7 @@
                             <label for="first_name" class="block mb-2 text-sm font-bold text-gray-900 ">Preferences</label>
                             <div>
                                 <div class="flex items-center gap-2">
-                                    <input name="preferences[]" type="checkbox" value="historical"
+                                    <input checked name="preferences[]" type="checkbox" value="historical"
                                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ">
                                     <label>Historical</label>
                                 </div>

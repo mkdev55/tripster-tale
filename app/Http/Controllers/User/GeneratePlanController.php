@@ -16,7 +16,24 @@ class GeneratePlanController extends Controller
 
     public function generate(Request $req, ChatGPTService $svc){
 
-        $result = $svc
+        $json = $this->formatChat($req);
+        return view('services.generate-plan.result',['result' => $json]);
+    }
+
+    public function result(){
+
+        return view('services.generate-plan.result');
+    }
+    public function new(Request $req){
+
+        $json = $this->formatChat($req);
+        return view('services.generate-plan.result',['result' => $json]);
+    }
+
+    private function formatChat(Request $req){
+        $svc = new ChatGPTService();
+
+        $content = $svc
         ->start("
         I have the following information from the user:
         Place: $req->place
@@ -25,16 +42,38 @@ class GeneratePlanController extends Controller
         Vacation Duration: $req->duration days
         Preferences: " . implode(', ', $req->preferences)."
         Transport: [no input provided]
-        Using this information, please provide me with a detailed travel itinerary and plan that fits within the user's budget and preferences. The plan should include recommendations for activities, accommodations, and transportation options in Phnom Penh. Please also provide an estimated cost breakdown for the entire trip.
 
-        note: please provide only in json format no need other format.
+        please find the above criteria and response result like this and make it compatible for integrate with coding json format. make sure to have the correct duration of vacation and make sure source are correct.
+        {
+            place: {name only},
+            total: {value}$
+            days: {
+                'day': 'day1'
+                'hotel': {name only}
+                'restaurant': {name only}
+                'tourist_area': {name only}
+                'transportation': {name only}
+            }
+        }
         ");
 
-        return view('services.generate-plan.result',['result' => $result]);
-    }
-
-    public function result(){
-
-        return view('services.generate-plan.result');
+        $data = json_decode($content,true);
+        if(!isset($data['days']['day'])){
+            // sleep(3);
+            // $this->formatChat($req);
+        }
+        return $data;
     }
 }
+
+// {
+//     place: {name only},
+//     total: {value}$
+//     days: {
+//         'day': 'day1'
+//         'hotel': {name only}
+//         'restaurant': {name only}
+//         'tourist_area': {name only}
+//         'transportation': {name only}
+//     }
+// }

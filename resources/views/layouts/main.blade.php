@@ -29,6 +29,7 @@
                         <div class="hidden sm:flex sm:items-center">
                             <x-link link="{{ route('system.user.home') }}" :isCurrent="Route::is('system.user.home')">Services</x-link>
                             <x-link link="{{ route('system.user.community') }}" :isCurrent="Route::is('system.user.community')">Community</x-link>
+                            <x-link link="{{ route('system.user.oppunity.index') }}" :isCurrent="Route::is('system.user.oppunity.index')">Opportunity</x-link>
                         </div>
                         @endauth
 
@@ -47,7 +48,7 @@
                                 <!-- Dropdown Menu -->
                                 <div x-cloak x-show="isOpen || openedWithKeyboard" x-transition x-trap="openedWithKeyboard" @click.outside="isOpen = false, openedWithKeyboard = false" @keydown.down.prevent="$focus.wrap().next()" @keydown.up.prevent="$focus.wrap().previous()" class="absolute top-11 left-0 flex w-full min-w-[10rem] flex-col overflow-hidden rounded-md border border-neutral-300 bg-neutral-50 py-1.5 " role="menu">
                                     <a href="#" class="bg-neutral-50 px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-900/5 hover:text-neutral-900 focus-visible:bg-neutral-900/10 focus-visible:text-neutral-900 focus-visible:outline-none " role="menuitem">Profile</a>
-                                    <a href="#" class="bg-neutral-50 px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-900/5 hover:text-neutral-900 focus-visible:bg-neutral-900/10 focus-visible:text-neutral-900 focus-visible:outline-none " role="menuitem">Subscription</a>
+                                    <a href="#" class="bg-neutral-50 px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-900/5 hover:text-neutral-900 focus-visible:bg-neutral-900/10 focus-visible:text-neutral-900 focus-visible:outline-none " role="menuitem">Applications</a>
                                     <a href="#" class="bg-neutral-50 px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-900/5 hover:text-neutral-900 focus-visible:bg-neutral-900/10 focus-visible:text-neutral-900 focus-visible:outline-none " role="menuitem">Settings</a>
                                     <form method="post" action="{{ route('logout') }}" class="w-full">
                                         @csrf
@@ -112,5 +113,6 @@
         </div>
     </header>
     @yield('content')
+    <script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.1/src/js/pagedone.js"></script>
 </body>
 </html>

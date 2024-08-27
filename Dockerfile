@@ -1,4 +1,4 @@
-FROM php:8.1-apache
+FROM php:8.2-apache
 
 WORKDIR /var/www/html
 COPY . /var/www/html
@@ -52,7 +52,6 @@ RUN a2enmod ssl
 
 ##Install supervisor for laravel queue
 RUN apt-get -y install supervisor
-COPY queue-worker.conf /etc/supervisor/conf.d/queue-worker.conf
 RUN mkdir /etc/supervisor/logs
 RUN touch /etc/supervisor/logs/queue-worker.log
 
