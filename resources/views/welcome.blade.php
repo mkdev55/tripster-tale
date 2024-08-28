@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Jenh Domner</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -1024,7 +1024,7 @@
                                     <h3 class="text-center font-black text-2xl font-serif">OUR SERVICES</h3>
                                 </div>
                             </div>
-                            <div class="flex justify-evenly flex-wrap flex-col lg:flex-row lg:gap-4">
+                            <div class="flex justify-evenly flex-wrap flex-col lg:flex-row lg:gap-8 lg:justify-center">
 
                                 <div class="w-full flex items-center p-8 gap-6 border shadow lg:w-1/4">
                                     <img src="location.png" alt="" class="w-14 h-14 mb-2">
@@ -1054,20 +1054,19 @@
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center p-8 gap-6 border shadow lg:w-1/4">
-                                    <img src="film.png" alt="" class="w-14 h-14 mb-2">
+                                    <img src="shipped.png" alt="" class="w-14 h-14 mb-2">
                                     <div class="flex flex-col">
-                                        <h1 class="font-black mb-4">Video Tours</h1>
-                                        <p class="text-slate-600 text-sm">Immerse yourself in Cambodia’s beauty with
-                                            our
-                                            exclusive video tours. Each destination, hotel, and restaurant comes with a
-                                            video to give you a preview before you go.</p>
+                                        <h1 class="font-black mb-4">Transportation</h1>
+                                        <p class="text-slate-600 text-sm">Travel stress - free with fast, affordable, and trusted local rides
+
+                                        </p>
                                     </div>
                                 </div>
 
                                 <div class="w-full flex items-center p-8 gap-6 border shadow lg:w-1/4">
                                     <img src="ratings.png" alt="" class="w-14 h-14 mb-2">
                                     <div class="flex flex-col">
-                                        <h1 class="font-black mb-4">Feedback & Reviews</h1>
+                                        <h1 class="font-black mb-4">Overall & Recommendation</h1>
                                         <p class="text-slate-600 text-sm">Share your experiences and help others make
                                             informed decisions. Our feedback option allows you to leave reviews and
                                             ratings
@@ -1075,7 +1074,7 @@
                                     </div>
                                 </div>
 
-                                <div class="w-full flex items-center p-8 gap-6 border shadow lg:w-1/4">
+                                {{-- <div class="w-full flex items-center p-8 gap-6 border shadow lg:w-1/4">
                                     <img src="lamp.png" alt="" class="w-14 h-14 mb-2">
                                     <div class="flex flex-col">
                                         <h1 class="font-black mb-4">Travel Tips & Advice</h1>
@@ -1084,7 +1083,7 @@
                                             safety,
                                             we provide essential information for a successful trip.</p>
                                     </div>
-                                </div>
+                                </div> --}}
 
                             </div>
                         </div>
