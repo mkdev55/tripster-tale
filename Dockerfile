@@ -66,6 +66,8 @@ COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 RUN chmod -R 775 /var/www/html
 RUN cd /var/www/html && chmod o+w ./storage/ -R
 RUN cd /var/www/html && chmod o+w ./bootstrap/ -R
+RUN chmod o+w database.sqlite
+RUN /usr/local/bin/php artisan key:gen
 
 RUN cd /var/www/html && composer update
 RUN cd /var/www/html && npm install
