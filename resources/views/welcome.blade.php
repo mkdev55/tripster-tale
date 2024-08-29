@@ -1001,7 +1001,7 @@
 
                     <br />
                     <div style="height: 20px;" id="plans"></div>
-                    <div class="mt-[10rem]" id="services">
+                    <div class="mt-[4rem]" id="services">
                         <div class="lg:flex lg:justify-center lg:items-center">
                             <div class="mx-8">
 
@@ -1021,15 +1021,15 @@
                             <div class="mx-8">
 
                                 <div class="mb-8">
-                                    <h3 class="text-center font-black text-2xl font-serif">OUR SERVICES</h3>
+                                    <h3 class="text-center font-black text-2xl font-serif">Our Services</h3>
                                 </div>
                             </div>
                             <div class="flex justify-evenly flex-wrap flex-col lg:flex-row lg:gap-8 lg:justify-center">
 
                                 <div class="w-full flex items-center p-8 gap-6 border shadow lg:w-1/4">
-                                    <img src="location.png" alt="" class="w-14 h-14 mb-2">
+                                    <img src="generate_plans2.jpg" alt="" class="w-14 h-14 mb-2">
                                     <div class="flex flex-col">
-                                        <h1 class="font-black mb-4">Destination Recommendations</h1>
+                                        <h1 class="font-black mb-4">Generate Plan & Map</h1>
                                         <p class="text-slate-600 text-sm">Discover the top places to visit across
                                             Cambodia’s
                                             25 provinces. From bustling cities to serene countryside, we provide curated
@@ -1038,19 +1038,17 @@
                                 </div>
 
                                 <div class="w-full flex items-center p-8 gap-6 border shadow lg:w-1/4">
-                                    <img src="hotel.png" alt="" class="w-14 h-14 mb-2">
+                                    <img src="tour_guide.jpg" alt="" class="w-14 h-14 mb-2">
                                     <div class="flex flex-col">
-                                        <h1 class="font-black mb-4">Hotel Listings</h1>
-                                        <p class="text-slate-600 text-sm">Find the perfect accommodation for your stay.
-                                            Our detailed hotel listings include ......</p>
+                                        <h1 class="font-black mb-4">Tourist Guide</h1>
+                                        <p class="text-slate-600 text-sm">Discover the best of Cambodia with our expert tourist guide, offering curated recommendations for attractions, hotels, and dining experiences across all 25 provinces.</p>
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center p-8 gap-6 border shadow lg:w-1/4">
-                                    <img src="restaurent.jpg" alt="" class="w-14 h-14 mb-2">
+                                    <img src="flight.jpg" alt="" class="w-14 h-14 mb-2">
                                     <div class="flex flex-col">
-                                        <h1 class="font-black mb-4">Restaurant Guides</h1>
-                                        <p class="text-slate-600 text-sm">Savor the best dining experiences with our
-                                            curated rest......</p>
+                                        <h1 class="font-black mb-4">Booking Flight</h1>
+                                        <p class="text-slate-600 text-sm">Book your flight effortlessly through our platform, where you can compare prices, select the best options, and secure your travel arrangements in just a few clicks.</p>
                                     </div>
                                 </div>
                                 <div class="w-full flex items-center p-8 gap-6 border shadow lg:w-1/4">

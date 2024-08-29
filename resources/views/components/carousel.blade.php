@@ -16,13 +16,6 @@
                     <p class="text-4xl lg:text-8xl font-bold font-title">Phnom Penh</p>
                 </div>
             </div>
-            <!-- Slide 3 -->
-            <div class="slide" :class="{ 'hidden': currentSlide !== 2 }">
-                <img src="kampot.jpg" alt="Slide 3" class="w-full lg:h-[65vh] object-cover rounded-lg" style="object-position: 50% 30%;">
-                <div class="absolute inset-0 flex items-center justify-center text-center text-white bg-black bg-opacity-30 rounded-lg">
-                    <p class="text-4xl lg:text-8xl font-bold font-title">Kampot</p>
-                </div>
-            </div>
             <!-- Navigation Buttons -->
             <button @click="prevSlide" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-500 text-white px-4 py-2 rounded-full hover:bg-gray-700">‹</button>
             <button @click="nextSlide" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-500 text-white px-4 py-2 rounded-full hover:bg-gray-700">›</button>
@@ -46,7 +39,7 @@
     function carouselData() {
         return {
             currentSlide: 0,
-            slides: ['angkorwat.jpg', 'phnompenh.jpg', 'kampot.jpg'],
+            slides: ['angkorwat.jpg', 'phnompenh.jpg'],
             nextSlide() {
                 this.currentSlide = (this.currentSlide + 1) % this.slides.length;
             },
